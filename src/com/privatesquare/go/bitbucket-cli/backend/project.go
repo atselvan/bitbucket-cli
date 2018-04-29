@@ -1,10 +1,10 @@
 package backend
 
 import (
-	"fmt"
+	m "com/privatesquare/go/bitbucket-cli/model"
+	u "com/privatesquare/go/bitbucket-cli/utils"
 	"encoding/json"
-	m "com/abnamro/solo/bitbucket-cli/model"
-	u "com/abnamro/solo/bitbucket-cli/utils"
+	"fmt"
 	"log"
 	"os"
 )
@@ -40,7 +40,7 @@ func GetProjectList(bitbucketURL string, user m.AuthUser, verbose bool) []string
 	return projectList
 }
 
-func ProjectExists(bitbucketURL, projectKey string, user m.AuthUser, verbose bool) bool{
+func ProjectExists(bitbucketURL, projectKey string, user m.AuthUser, verbose bool) bool {
 	if projectKey == "" {
 		log.Fatal("projectKey is a required parameters for checking of a project exists")
 	}

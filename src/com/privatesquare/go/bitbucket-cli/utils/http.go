@@ -2,7 +2,7 @@ package utils
 
 import (
 	"bytes"
-	m "com/abnamro/solo/bitbucket-cli/model"
+	m "com/privatesquare/go/bitbucket-cli/model"
 	"fmt"
 	"io/ioutil"
 	"net/http"

@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"os"
 	"log"
+	"os"
 )
 
 func FileExists(name string) bool {
@@ -16,21 +16,21 @@ func FileExists(name string) bool {
 
 func CreateFile(name string) os.File {
 	var f os.File
-	if !FileExists(name){
+	if !FileExists(name) {
 		fo, err := os.Create(name)
 		Error(err, "There was a error creating a new file")
 		defer fo.Close()
-	}else{
+	} else {
 		log.Println("File created : ", name)
 	}
 	return f
 }
 
-func RemoveFile(name string){
-	if FileExists(name){
+func RemoveFile(name string) {
+	if FileExists(name) {
 		err := os.Remove(name)
 		Error(err, "There was an error deleting the file")
-	}else{
+	} else {
 		log.Println("File does not exist hence not deleting the file : ", name)
 	}
 }

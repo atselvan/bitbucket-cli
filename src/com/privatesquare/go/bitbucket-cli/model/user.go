@@ -29,3 +29,8 @@ type BBUserDetails struct {
 	MutableDetails              bool   `json:"mutableDetails"`
 	MutableGroups               bool   `json:"mutableGroups"`
 }
+
+type GroupUser struct {
+	Context  string `json:"context"`
+	ItemName string `json:"itemName"`
+}
